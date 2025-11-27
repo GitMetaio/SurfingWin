@@ -1,4 +1,10 @@
-## 项目结构
+# SurfingWin
+
+适用于 Windows 的轻量级 Clash 运行环境，采用“免安装、即开即用”的便携式结构。  
+
+内置 Mihomo/Clash核心、完整的配置目录，以及一组基于 VBS、Task Scheduler 和批处理的自动化脚本，支持一键启动、延迟启动、开机自启注册、计划任务管理与安全关闭。所有逻辑均以最小依赖实现，适合希望快速部署或持续使用 Clash 的 Windows 用户。
+
+- 📁 项目结构
 ```text
 SurfingWin
 ├── bin
@@ -24,7 +30,7 @@ SurfingWin
 2. 如果通过从 Windows 客户端浏览器下载，建议在**解压前**右键文件 -> **属性** -> 点击 **解除锁定**（Unblock）解决每次执行所带来的烦人安全提示
 3. 在 `bin/clash-amd64.exe` 上右键 -> **属性** -> **兼容性**，勾选“以管理员权限运行此程序”  
    - **tips**：Tun 模式需要管理员权限运行。  
-4. 编辑 `config/config.yaml` 填入订阅，使用方法与 Android 相同
+4. 编辑 `config/config.yaml` 填入订阅，使用方法与 [Android](https://github.com/GitMetaio/Surfing) 相同
 5. 双击 **启动服务** 或选中该文件右键选择打开运行即可。  
 6. 控制台地址: 
    ```text
@@ -34,9 +40,7 @@ SurfingWin
 8. 最后建议禁用智能多宿主解析，防止DNS请求泄露
 
 ## 开机自启动
-⭐ 推荐使用 **一键执行** 批处理文件
-
 1. 打开 Windows **任务计划程序**
-2. 新建一个任务来开机运行 `scripts/Surfing.start.vbs`.
+2. 新建一个任务来开机运行 `scripts/Surfing.delay.vbs`.
 3. 按需修改任务名称、**文件路径**、触发器、条件等等。
 4. **在“常规”选项卡中，勾选“使用最高权限运行”**。（如果不设置此选项，每次启动会跳出 UAC 窗口）
