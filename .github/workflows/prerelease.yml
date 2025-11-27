@@ -1,0 +1,52 @@
+name: prerelease
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Set Timestamp
+        run: echo "TIMESTAMP=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+
+      - name: Run build.sh
+        run: sh build.sh
+
+      - name: Delete current prerelease assets
+        uses: andreaswilli/delete-release-assets-action@v3.0.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: Prerelease-Alpha
+          deleteOnlyFromDrafts: false
+
+      - name: Tag Repo
+        uses: richardsimko/update-tag@v1
+        with:
+          tag_name: Prerelease-Alpha
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Prerelease
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: Prerelease-Alpha
+          files: Surfing_windows-amd64.zip
+          prerelease: true
+          generate_release_notes: true
+          body: |
+            Synchronize the latest code updates of branches and keep only the latest version  
+            Release Timestamp: ${{ env.TIMESTAMP }}
+            
+            **Full:** [Commits](https://github.com/GitMetaio/SurfingWin/commits/main)
