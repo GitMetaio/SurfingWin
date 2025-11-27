@@ -1,5 +1,7 @@
 #!/bin/sh
-OUTPUT_ZIP="Surfing_windows-amd64.zip"
+
+SHORT_HASH=$(git rev-parse --short=7 HEAD)
+OUTPUT_ZIP="Surfing_windows-amd64_${SHORT_HASH}.zip"
 
 [ -f "$OUTPUT_ZIP" ] && rm -f "$OUTPUT_ZIP"
 
