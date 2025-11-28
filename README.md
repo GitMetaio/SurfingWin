@@ -30,6 +30,27 @@ SurfingWin
 └── 脚本依赖: PowerShell / Windows Script Host (WSH) / cmd.exe
 ```
 
+<details>
+<summary>GPL-3.0 License</summary>
+
+```text
+Copyright (C) 2025 GitMetaio
+
+This project is licensed under the GNU General Public License version GPL-3.0.
+You are free to use, modify, and distribute this project under the terms GPL-3.0.
+
+Dependencies:
+The binary file bin/clash-amd64.exe is part of the Mihomo project and is not created or maintained by SurfingWin.
+SurfingWin scripts may require this binary file to function properly. must comply separately with the license and usage terms of Mihomo.
+The authors of SurfingWin assume no responsibility for the binary file or any consequences arising from its use.
+
+Disclaimer:
+SurfingWin scripts are provided "as is", without any warranty of any kind.
+The authors are not liable for any direct or indirect damages, including but not limited to system issues, data loss, or network problems resulting from the use of these scripts.
+```
+
+</details>
+
 ## 使用方法
 1. 通过 [预览发布页](https://github.com/GitMetaio/SurfingWin/releases/tag/Prerelease-Alpha) 下载**zip**，并解压至桌面
 2. 如果通过从 Windows 客户端浏览器下载，建议在**解压前**右键文件 -> **属性** -> 点击 **解除锁定**（Unblock）解决每次执行所带来的烦人安全提示
