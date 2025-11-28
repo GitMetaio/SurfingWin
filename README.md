@@ -12,6 +12,8 @@ SurfingWin
 ├── config
 │   ├── config.yaml           # 配置文件
 ├── scripts
+│   ├── Surfing.start.ps1     # 备用启动 Clash 服务脚本
+│   ├── Surfing.start.bat     # 调用启动 Clash 服务脚本
 │   ├── Surfing.start.vbs     # 启动 Clash 并初始化
 │   ├── Surfing.delay.vbs     # 开机启动 Clash 并初始化
 │   ├── Surfing.startup.xml   # 注册计划任务配置文件
@@ -23,6 +25,9 @@ SurfingWin
 ├── 开机自启.bat                # 设置开机自启（注册计划任务）
 ├── 启动服务.bat                # 批处理方式启动 Clash 服务
 └── 停止服务.bat                # 批处理方式停止 Clash 服务
+│
+│
+└── 脚本依赖: PowerShell / Windows Script Host (WSH) / cmd.exe
 ```
 
 ## 使用方法
