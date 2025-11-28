@@ -52,7 +52,7 @@ The authors are not liable for any direct or indirect damages, including but not
 </details>
 
 ## 使用方法
-1. 通过 [预览发布页](https://github.com/GitMetaio/SurfingWin/releases/tag/Prerelease-Alpha) 下载**zip**，并解压至桌面
+1. 通过 [发布页](https://github.com/GitMetaio/SurfingWin/releases/tag/Windows) 下载**zip**，并解压至桌面
 2. 如果通过从 Windows 客户端浏览器下载，建议在**解压前**右键文件 -> **属性** -> 点击 **解除锁定**（Unblock）解决每次执行所带来的烦人安全提示
 3. 在 `bin/clash-amd64.exe` 上右键 -> **属性** -> **兼容性**，勾选“以管理员权限运行此程序”  
    - **tips**：Tun 模式需要管理员权限运行。  
