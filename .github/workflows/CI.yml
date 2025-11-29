@@ -1,4 +1,4 @@
-name: latest-release
+name: CI
 
 on:
   push:
@@ -28,13 +28,6 @@ jobs:
       - name: Run build.sh
         run: sh build.sh
 
-      - name: Delete current fixed tag assets
-        uses: andreaswilli/delete-release-assets-action@v3.0.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          tag: Windows
-          deleteOnlyFromDrafts: false
-
       - name: Tag Repo
         uses: richardsimko/update-tag@v1
         with:
@@ -47,10 +40,12 @@ jobs:
         with:
           tag_name: Windows
           files: Surfing_windows-amd64_${{ env.SHORT_HASH }}.zip
-          
           generate_release_notes: true
           body: |
-            Synchronize the latest code updates of branches and keep only the latest version  
+            # Latest CI / Build
+            自动同步分支最新代码以进行最新版本构建
             Release Timestamp: ${{ env.TIMESTAMP }}
+
+            [![Download ${{ env.SHORT_HASH }}](https://img.shields.io/badge/Version%20Download-${{ env.SHORT_HASH }}-00b56a?style=flat-square&logo=git&logoColor=white)](https://github.com/GitMetaio/SurfingWin/releases/download/Windows/Surfing_windows-amd64_${{ env.SHORT_HASH }}.zip)
 
             **Full:** [Commits](https://github.com/GitMetaio/SurfingWin/commits/main)
