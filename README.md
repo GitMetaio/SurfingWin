@@ -8,7 +8,9 @@
 ```text
 SurfingWin
 ├── bin
-│   ├── clash-amd64.exe       # 核心文件
+│   ├── clash-amd64.exe       # Mihomo v1.19.16
+│         # MD5  | a9d5f93b64ce194e3ac007f38c853aa0
+│         # HA256| 48d19176afd17b622c1ba869ccd91d6555b27823da459114120e249afa2750cb
 ├── config
 │   ├── config.yaml           # 配置文件
 ├── scripts
@@ -27,7 +29,7 @@ SurfingWin
 └── 停止服务.bat                # 批处理方式停止 Clash 服务
 │
 │
-└── 脚本依赖: PowerShell / Windows Script Host (WSH) / cmd.exe
+└── # 脚本依赖: PowerShell / Windows Script Host (WSH) / cmd.exe
 ```
 
 <details>
